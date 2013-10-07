@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{%block title%}{%endblock%}</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="{{STATIC_URL}}scripts/scripts.js">
+	
+</script>
+
+<link rel="stylesheet" href="{{STATIC_URL}}css/base.css" />
+<title>Home</title> {% block extrahead %} {% endblock %} {% load url from future %}
+
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="{% url 'faculty.views.index_course' %}">Courses</a>
+			<li><a href="#">Support</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">login</a></li>
+			<li><a href="#">register</a></li>
+			<li><a href="/admin/">Admin</a></li>{%block extranav%} {%endblock%}
+		</ul>
+	</nav>
+
+	<div id="sidebar">{%block extrasidebar%} {%endblock%}</div>
+
+	<div id="content">{%block content%} {%endblock%}</div>
+	<footer>
+		<h2>Django powered site</h2>
+		<div>Programmed by Loai Ghoraba</div>
+	</footer>
+</body>
+</html>

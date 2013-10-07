@@ -1,0 +1,11 @@
+{%extends 'base.html'%} 
+
+{%block content%}
+
+	<ul>
+	{%for coures in courses%}
+		<li><a href="{%url 'faculty.views.show_course'%}/{{course.id}}">{{course}}</a></li>
+	{%endfor%}
+	</ul>
+
+{%block content%}

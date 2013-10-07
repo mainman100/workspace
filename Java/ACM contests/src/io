@@ -1,0 +1,14 @@
+
+
+	static StreamTokenizer st;
+	private static int r()throws Exception
+	{
+ 	   st.nextToken();
+ 	   return (int) st.nval;
+	}
+	public static void main (String[]args)throws Exception
+	{
+		st=new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		StringBuffer out=new StringBuffer();
+	
+	}

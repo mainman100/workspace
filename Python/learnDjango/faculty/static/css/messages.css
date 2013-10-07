@@ -1,0 +1,15 @@
+.error {
+	color: red;
+}
+
+.message {
+	position: absolute;
+	text-align: center;
+	left: 45%;
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	border-radius: 5px;
+	margin: 20px;
+	padding: 10px;
+	font-size: larger;
+}
