@@ -50,5 +50,20 @@ def test1():
         file_.writelines(rows)
         i += 20
     f.close()
+        
+def awny():
+    url="https://www.facebook.com/Al3uny"
+    f = urllib2.urlopen(url)   
+    soup = BeautifulSoup(f.read())
+    spans=soup.find_all("span",class_="userContent")
+    div=soup.find(id="pagelet_timeline_main_column")
+    print div
+    x=soup.find_all("span",dir="rtl")
+   # divs=soup.find_all("div")
+    print spans,x
+  #  file_=open("/home/loai/Desktop/awny.txt","w")
+   # file_.write(soup.prettify())
+  #  file_.close()
 
+awny() 
 test1()
