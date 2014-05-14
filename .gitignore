@@ -1,9 +1,5 @@
-.project
-.classpath
 .settings/
-.cproject
 .buildpath
-.pydevproject
 build.xml
 .metadata/
 *~
