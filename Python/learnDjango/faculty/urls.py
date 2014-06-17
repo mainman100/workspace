@@ -6,5 +6,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('faculty.views',
     url(r'^course/$', 'index_course'),
-    url(r'^course/(?p<id>\d+)$', 'show_course'),
+    url(r'^course/(?P<id>\d+)/$', 'show_course'),
 )

@@ -9,7 +9,6 @@ def download_awny_posts_and_comments():
     url = "https://graph.facebook.com/" + page_id + "/posts?limit=50&access_token=" + token
     print url
     count = 1
-    posts = set()
     while True:
         f = urllib2.urlopen(url)   
         data = f.read()
@@ -19,11 +18,6 @@ def download_awny_posts_and_comments():
         for data in json_response["data"]:
             if "message" not in data:
                 break
-            if data["message"] in posts:
-                file_.close()
-                flag = False
-                break
-            posts.add(data["message"])
             file_.write(str(count) + "\n\n" + data["message"] + "\n\n")
             if "comments" in data:
                 comments = data["comments"]["data"]

@@ -50,8 +50,6 @@ class Router{
 		}
 	}
 	public function executeAction() {
-		//	echo $this->controller.", ".$this->action."<br>";
-		//	echo class_exists($this->controller).method_exists($this->controller,$this->action);
 		//does the class exist?
 		if (class_exists($this->controller) && method_exists($this->controller,$this->action)) {
 			$controller=new $this->controller();

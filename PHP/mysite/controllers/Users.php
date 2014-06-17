@@ -87,7 +87,7 @@ class Users extends Controller{
 					$validator->addError("Old password is not correct !");
 					throw new Exception();
 				}
-				if($new_password!=$new_password_repeat){
+				if($new_password!=$repeat_new_password){
 					$validator->addError("Passwords don't match");
 					throw new Exception();
 				}

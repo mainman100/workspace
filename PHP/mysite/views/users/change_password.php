@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td align="left">Repeat new password:</td>
-				<td align="left"><input type="password" name="new_password_repeat" />
+				<td align="left"><input type="password" name="repeat_new_password" />
 				</td>
 			</tr>
 		</table>

@@ -23,12 +23,19 @@ class validator{
 		{
 			foreach ($args as $key=>$value)
 				if (!isset($key)||trim($value)=='')
-				array_push($this->errors,"$key is required");
+				{
+					$key_visualized=str_replace("_", " ", $key);
+					array_push($this->errors,"$key_visualized is required");
+				}
 		}
 		else
 		{
 			if (!isset($args)||trim($args)=='')
-				array_push($this->errors,"$args is required");
+			{
+				$args_visualized=str_replace("_", " ", $args);
+				array_push($this->errors,"$args_visualized is required");
+
+			}
 		}
 	}
 	function __get($name)

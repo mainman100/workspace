@@ -66,7 +66,11 @@ def numberFiles(path, deep=False):
             count += 1
     if deep:
         map(lambda x:numberFiles(os.path.join(path, x)), dirs)
-    
+def removeDuplicateFiles(dir_):
+    all_=os.listdir(dir_)
+    for file_ in all_:
+        if "(2)" in file_:
+            os.remove(os.path.join(dir_,file_))
 if __name__ == '__main__':
-    numberFiles("/home/loai/Desktop/number")
+    removeDuplicateFiles("/media/Data/Private/Mobile/Images/Friends")
     

@@ -27,7 +27,6 @@ class User extends Model
 		//if it is the first time, save it, otherwise if we are just updating user data, don't re encrypt it
 		if(!isset($this->fields["id"]))
 			$this->fields["password"]=sha1($this->fields["password"]);
-		echo "password: ".$this->fields["password"]."<br>";
 		return parent::save();
 	}
 	/**
