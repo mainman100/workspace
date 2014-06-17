@@ -2,6 +2,10 @@
 .buildpath
 build.xml
 .metadata/
+.classpath
+.project
+.cproject
+.pydevproject
 *~
 Java/TopCoder/
 
